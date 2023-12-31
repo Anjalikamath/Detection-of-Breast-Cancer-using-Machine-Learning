@@ -40,10 +40,6 @@ def fullentropy(x):
 		entro= ((-p_minus*(math.log(p_minus,2)))+(-p_plus*(math.log(p_plus,2))))
 		return entro
 
-
-
-
-
 #get gain for individual columns
 def gain1(x,y):
 	
@@ -66,8 +62,6 @@ def gain1(x,y):
 	
 	return final_entropy
 
-
-
 #get the column with the max entropy
 def find_max_entropy(x):
 	maxx=x[0]
@@ -77,14 +71,7 @@ def find_max_entropy(x):
 			maxx=x[i]
 			col=i
 	return col,maxx
-	
 
-
-'''
-y=[]
-for i in range(len(rows)):
-	y.append(rows[i])
-'''
 full_entropy=fullentropy(rows)
 x=(gain1(rows,rows)) #gain for all the columns
 c,m=find_max_entropy(x) #get column with max gain
